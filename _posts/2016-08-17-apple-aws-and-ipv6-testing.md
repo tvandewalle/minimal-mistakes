@@ -10,11 +10,14 @@ categories:
     - Hacking
 ---
 
-AWS recently announced support for IPv6 in S3. Comments on Hacker News linking
-this to Apple's IPv6-only network support requirement lead me to believe that
-there is some misunderstanding around this requirement.
+AWS recently announced [support for IPv6 in
+S3](https://aws.amazon.com/blogs/aws/now-available-ipv6-support-for-amazon-s3/).
+Comments on Hacker News linking this to Apple's IPv6-only network support
+requirement lead me to believe that there is some misunderstanding around this
+requirement.
 
-At WWDC 2015 Apple announced: "Starting June 1, 2016 all apps submitted to
+At [WWDC 2015 Apple announced](https://developer.apple.com/news/?id=05042016a): 
+"Starting June 1, 2016 all apps submitted to
 the App Store must support IPv6-only networking." If you host your mobile
 backend on AWS you might be concerned because of Amazon's slow adoption of
 IPv6.
