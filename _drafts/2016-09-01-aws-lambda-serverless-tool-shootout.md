@@ -40,7 +40,7 @@ AWS introduced Lambda at reinvent:2014 and the developer community was
 immediately excited about the possibilities (and about the potential money
 savings). Since then AWS has introduced API Gateway, bumped the time limit on
 Lambda functions, introduced additional native runtimes and added more event
-sources. With all of this advancement the tooling provided by AWS has remained
+sources. With all of this advancement, the tooling provided by AWS has remained
 the same and is one of the more significant barriers to getting productive in
 this environment quickly.
 
@@ -50,16 +50,16 @@ deploy even the simplest Lambda functions. Mitch Garnaat, the author of Kappa
 (one of the oldest tools in the serverless category), sums up the steps for
 deploying a Lambda function to AWS simply as:
 
-1. Write the function itself
+1. Write the function itself.
 2. Create the IAM role required by the Lambda function itself (the executing
-   role) to allow it access to any resources it needs to do its job Add
+   role) to allow it access to any resources it needs to do its job. Add
    additional permissions to the Lambda function if it is going to be used in a
-   Push model (e.g. S3, SNS) rather than a Pull model.
-3. Zip the function and any dependencies and upload it to AWS Lambda
-4. Test the function with mock data
-5. Retrieve the output of the function from CloudWatch Logs
-6. Add an event source to the function
-7. View the output of the live function
+   push model (e.g. S3, SNS) rather than a pull model.
+3. Zip the function and any dependencies and upload it to AWS Lambda.
+4. Test the function with mock data.
+5. Retrieve the output of the function from CloudWatch Logs.
+6. Add an event source to the function.
+7. View the output of the live function.
 
 That's a lot of steps and having tooling built around automating this sure
 would be nice. There are many other limitations to Lambda functions that might
@@ -79,23 +79,22 @@ following functions:
 3. Support deletion of users.
 
 While this is not a full featured authentication service, it serves as a good
-size project for understanding the pros and cons of each of the chosen Lambda
-tools. The projet includes: 
+sized project for understanding the pros and cons of each of the chosen Lambda
+tools. The project includes: 
 
 * Developing and testing the Lambda function
 * Packaging and deploying the Lambda function.
-* Integrating with external services
-* Creating an API
+* Integrating with external services.
+* Creating an API.
 * Deploying the complete package in multiple environments (production, staging,
-  etc.)
+  etc.).
 
 ## The Criteria
-No reviews are completely independent. They all come with colored with the reviewer's experience and  point of view on how the world should work. With that in
-mind here are some of the criteria and biases that I bring to this:
+No reviews are completely independent. They all come with colored with the reviewer's experience and point of view on how the world should work. With that in mind, here are some of the criteria and biases that I bring to this:
 
 * I generally prefer Cloudformation when creating resources as it allows nice
   uniform packaging of things (and cleanup when you are done). It is not
-  without it's flaws however so I am willing to choose somehting else.
+  without its flaws however, so I am willing to choose something else.
 * Testing matters to me. If testing your project is difficult you won't do it.
 * Logging matters to me. If logging is difficult then you won't be able to find
   out what's broken later.
@@ -110,15 +109,9 @@ mind here are some of the criteria and biases that I bring to this:
 I'll be building this project with 3 different packages in order roughly of
 increasing capability and complexity:
 
-1. [Kappa](http://kappa.readthedocs.io/en/develop/) - The original tool on the block. Kappa is geared primarily at
-   building and deploying lambda functions. Everything else happens outside of
-   Kappa.
-2. [Gordon](https://github.com/jorgebastida/gordon) - One of the newer kids on the block and with some more extensive
-   features. Gordon aims to integrate more of AWS into the tool.
-3. [Serverless](https://github.com/serverless/serverless) - It's been around for sometime (it used to be called
-   [JAWS](https://aws.amazon.com/blogs/compute/getting-started-with-jaws-on-amazon-web-services/))
-   and is ambitious. It aims to integrate many services and simplify the
-   workflow of managing services in complex environments.
+1. [Kappa](http://kappa.readthedocs.io/en/develop/) - The original tool on the block. Kappa is geared primarily at building and deploying lambda functions. Everything else happens outside of Kappa.
+2. [Gordon](https://github.com/jorgebastida/gordon) - One of the newer kids on the block and with some more extensive features. Gordon aims to integrate more of AWS into the tool.
+3. [Serverless](https://github.com/serverless/serverless) - It's been around for sometime (it used to be called [JAWS](https://aws.amazon.com/blogs/compute/getting-started-with-jaws-on-amazon-web-services/)) and is ambitious. It aims to integrate many services and simplify the workflow of managing services in complex environments.
 
 ## Next
 Part 2 of the series will take on the challenge with Kappa. All of the code and
