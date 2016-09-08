@@ -3,7 +3,7 @@ header:
     overlay_image: console_snippet.png
     overlay_filter: 0.6
 excerpt:
-    Tip - Getting the right permissions for Read-Only access to an S3 bucket
+    Getting the right permissions for Read-Only access to an S3 bucket
     while allowing search to work in the AWS console.
 title: "S3 IAM Permissions for Read-Only and Console Search"
 tags:
